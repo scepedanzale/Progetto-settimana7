@@ -1,17 +1,16 @@
 import React from 'react'
 import {Container, Row, Col, Dropdown} from 'react-bootstrap';
-import NewReleases from './NewReleases';
-import Trending from './Trending';
-import WatchAgain from './WatchAgain';
+import NewReleases from '../components/NewReleases'
+import Trending from '../components/Trending';
+import WatchAgain from '../components/WatchAgain';
 
-export default function MainComponent() {
-const endpoint = 'http://www.omdbapi.com/?apikey=526860b7&s=';
+export default function MainPage({endpoint}) {
   return (
     <>
     <Container fluid className='main pt-3'>
         <Row className='justify-content-between align-items-center'>
             <Col xs={6} className='d-flex'>
-                <h2 className='me-3'>TV Shows</h2>
+                <h2 className='me-3'>Home Page</h2>
                 <Dropdown className='border border-1 border-secondary'>
                     <Dropdown.Toggle variant='dark rounded-0' id="dropdown-basic">
                         Genres

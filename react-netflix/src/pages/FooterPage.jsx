@@ -1,11 +1,12 @@
 import React from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 
-export default function FooterComponent() {
+export default function FooterPage() {
   return (
     <footer>
-          <Row className="text-center">
-            <Col xs={6} className="offset-3">
+          <Container fluid className="d-flex justify-content-center">
+          <Row>
+            <Col xs={12} className="">
               <Row>
                 <Col xs={12} className="text-left mb-2">
                   <i className="fa fa-facebook footer-icon"></i>
@@ -80,19 +81,20 @@ export default function FooterComponent() {
                 </Col>
               </Row>
               <Row>
-                <Col xs={12} className="text-left mb-2">
+                <Col xs={12} className="text-center mb-2">
                   <Button className="footer-button rounded-0 mt-3">
                     Service Code
                   </Button>
                 </Col>
               </Row>
               <Row>
-                <Col xs={12} className="text-left mb-2 mt-2 copyright">
+                <Col xs={12} className="text-center my-3 copyright">
                   © 1997-2022 Netflix, Inc.
                 </Col>
               </Row>
             </Col>
           </Row>
-        </footer>
+          </Container>
+    </footer>
   )
 }

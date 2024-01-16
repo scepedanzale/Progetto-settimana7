@@ -1,7 +1,8 @@
 import React from 'react'
 import {Nav, Navbar, Image} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 
-export default function NavComponent() {
+export default function NavbarPage() {
   return (
     <Navbar collapseOnSelect expand="md" className="navbar-dark sticky-top shadow-lg pe-3" style={{backgroundColor: "#221f1f"}}>
         <Nav.Item>
@@ -13,10 +14,10 @@ export default function NavComponent() {
         <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-between'>
           <ul className="navbar-nav mr-auto ps-3">
             <Nav.Item>
-              <Nav.Link className="font-weight-bold" href="#">Home <span className="sr-only">(current)</span></Nav.Link>
+              <Link className="font-weight-bold nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link className="font-weight-bold" href="#">TV Shows</Nav.Link>
+              <Link className="nav-link font-weight-bold" to='/tvshows'>TV Shows</Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="font-weight-bold" href="#">Movies</Nav.Link>
@@ -45,9 +46,9 @@ export default function NavComponent() {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>
+              <Link to='/settings'>
                 <i className="fa fa-user icons"></i>
-              </Nav.Link>
+              </Link>
             </Nav.Item>
           </div>
         </Navbar.Collapse>

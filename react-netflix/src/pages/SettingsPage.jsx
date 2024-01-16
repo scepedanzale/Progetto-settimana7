@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Row, Col, Image, Form} from 'react-bootstrap'
 
-export default function Settings() {
+export default function SettingsPage() {
   return (
     <Container>
             <Row className="title">

@@ -1,11 +1,16 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavComponent from './components/NavComponent';
-import FooterComponent from './components/FooterComponent';
-import MainComponent from './components/MainComponent';
-
+import NavbarPage from './pages/NavbarPage';
+import FooterPage from './pages/FooterPage';
+import HomePage from './pages/HomePage';
+import TvShowsComponent from './components/TvShowsComponent'
+import MovieDetailComponent from './components/MovieDetailComponent';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SettingsPage from './pages/SettingsPage';
 
 function App() {
+  const endpoint = 'http://www.omdbapi.com/?apikey=526860b7&s=';
+
   return (
     <>
     <link
@@ -15,10 +20,16 @@ function App() {
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-      <NavComponent/>
-      <MainComponent/>
-      <FooterComponent/>
-      
+      <BrowserRouter>
+        <NavbarPage/>
+        <Routes>
+          <Route path='/' element={<HomePage endpoint={endpoint}/>}/>
+          <Route path='/tvshows' element={<TvShowsComponent endpoint={endpoint}/>}/>
+          <Route path='/movie-detail/:movieID' element={<MovieDetailComponent endpoint={endpoint}/>}/>
+          <Route path='/settings' element={<SettingsPage/>}/>
+        </Routes>
+        <FooterPage/>
+      </BrowserRouter>
     </>
   )
 }

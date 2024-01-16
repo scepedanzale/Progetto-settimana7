@@ -3,7 +3,8 @@
 }
 body {
   margin: 0;
-  color: #f5f5f1;
+  color: #f5f5f1 !important;
+  background-color: #221f1f !important;
 }
 
 h2,
@@ -44,7 +45,11 @@ footer {
 
 
 
-
+footer{
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+}
 .footer-icon {
   font-size: 1.3em;
   margin-left: 1%;
@@ -82,10 +87,3 @@ footer a{
   font-size: 0.6em;
 }
 
-.col img {
-
-}
-
-.col img:hover {
-
-}
