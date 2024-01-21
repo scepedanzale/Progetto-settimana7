@@ -6,9 +6,9 @@ export default function NavbarPage() {
   return (
     <Navbar collapseOnSelect expand="md" className="navbar-dark sticky-top shadow-lg pe-3" style={{backgroundColor: "#221f1f"}}>
         <Nav.Item>
-          <Nav.Link className="navbar-brand" href="#">
+          <Link className="navbar-brand" to='/'>
             <Image src="../assets/logo.png" alt='logo'  style={{width: "100px", height: "55px"}}/>
-          </Nav.Link>
+          </Link>
         </Nav.Item>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-between'>

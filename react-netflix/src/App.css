@@ -47,8 +47,6 @@ footer {
 
 footer{
   width: 100%;
-  position: sticky;
-  bottom: 0;
 }
 .footer-icon {
   font-size: 1.3em;

@@ -10,6 +10,7 @@ import SettingsPage from './pages/SettingsPage';
 
 function App() {
   const endpoint = 'http://www.omdbapi.com/?apikey=526860b7&s=';
+  const endpointSingleFilm = 'http://www.omdbapi.com/?apikey=526860b7&i=';
 
   return (
     <>
@@ -25,7 +26,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage endpoint={endpoint}/>}/>
           <Route path='/tvshows' element={<TvShowsComponent endpoint={endpoint}/>}/>
-          <Route path='/movie-detail/:movieID' element={<MovieDetailComponent endpoint={endpoint}/>}/>
+          <Route path='/movie-detail/:id' element={<MovieDetailComponent endpoint={endpointSingleFilm}/>}/>
           <Route path='/settings' element={<SettingsPage/>}/>
         </Routes>
         <FooterPage/>
